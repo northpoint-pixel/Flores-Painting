@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery | Flores Painting</title>
+  <meta name="description" content="See completed interior and exterior painting projects by Flores Painting." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Flores Painting home">
+        <div class="brand-badge" aria-hidden="true"></div>
+        <div class="brand-text">
+          <strong>Flores Painting</strong>
+          <span>Interior & Exterior • Residential</span>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <a class="btn primary" href="contact.html">Request an Estimate</a>
+
+        <div class="dropdown">
+          <button class="btn hamburger" type="button"
+                  aria-label="Open menu"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  data-menu-button>
+            <span class="hamburger-lines" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </span>
+          </button>
+
+          <nav class="menu" data-menu aria-label="Site menu">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact / Estimate</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Project Gallery</h2>
+          <p>Replace these photos with real job pictures from Javier’s projects.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="images/job-01.jpg" alt="Exterior painting project photo 1" />
+            <div class="meta">Exterior repaint</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/job-02.jpg" alt="Interior painting project photo 2" />
+            <div class="meta">Interior walls</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/job-03.jpg" alt="Painting project photo 3" />
+            <div class="meta">Trim + doors</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/job-04.jpg" alt="Painting project photo 4" />
+            <div class="meta">Accent wall</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/job-05.jpg" alt="Painting project photo 5" />
+            <div class="meta">Exterior detail</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/job-06.jpg" alt="Painting project photo 6" />
+            <div class="meta">Interior refresh</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/job-07.jpg" alt="Painting project photo 7" />
+            <div class="meta">Trim work</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/job-08.jpg" alt="Painting project photo 8" />
+            <div class="meta">Clean finish</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <a class="btn" href="contact.html">Request an Estimate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© <span id="year"></span> Flores Painting. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
