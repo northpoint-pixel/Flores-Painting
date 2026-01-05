@@ -18,13 +18,13 @@
         <div class="brand-badge" aria-hidden="true"></div>
         <div class="brand-text">
           <strong>Flores Painting</strong>
-          <span>Interior & Exterior • Residential</span>
+          <span data-i18n="brand_tagline">Interior & Exterior • Residential</span>
         </div>
       </a>
 
-     <div class="nav-actions">
-  <button class="btn" id="langToggle" type="button">ES</button>
-  <a class="btn primary" href="contact.html">Request an Estimate</a>
+      <div class="nav-actions">
+        <button class="btn" id="langToggle" type="button">ES</button>
+        <a class="btn" href="gallery.html" data-i18n="btn_view_gallery_contact">View Gallery</a>
 
         <div class="dropdown">
           <button class="btn hamburger" type="button"
@@ -38,9 +38,9 @@
           </button>
 
           <nav class="menu" data-menu aria-label="Site menu">
-            <a href="index.html">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact / Estimate</a>
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+            <a href="contact.html" data-i18n="nav_contact">Contact / Estimate</a>
           </nav>
         </div>
       </div>
@@ -51,70 +51,65 @@
     <section>
       <div class="container">
         <div class="section-title">
-          <h2>Request an Estimate</h2>
-          <p>Tell us about your project and how to reach you.</p>
+          <h2 data-i18n="contact_title">Request an Estimate</h2>
+          <p data-i18n="contact_sub">Tell us about your project and how to reach you.</p>
         </div>
 
-        <div class="notice" style="margin-bottom: 12px;">
+        <div class="notice" style="margin-bottom: 12px;" data-i18n="estimate_notice">
           We will provide an estimated price after we see the job or project you want done.
           Photos help, and an on-site look may be needed for an accurate quote.
         </div>
 
         <div class="hero-card">
-          <!-- Formspree: replace the action URL with your Formspree endpoint -->
           <form class="form" action="https://formspree.io/f/yourFormID" method="POST">
             <div class="field">
-              <label for="name">Full Name</label>
+              <label for="name" data-i18n="name_label">Full Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required />
             </div>
 
             <div class="field">
-              <label for="phone">Phone</label>
+              <label for="phone" data-i18n="phone_label">Phone</label>
               <input id="phone" name="phone" type="tel" autocomplete="tel" />
             </div>
 
             <div class="field">
-              <label for="email">Email</label>
+              <label for="email" data-i18n="email_label">Email</label>
               <input id="email" name="email" type="email" autocomplete="email" required />
             </div>
 
             <div class="field">
-              <label for="service">Service Needed</label>
+              <label for="service" data-i18n="service_label">Service Needed</label>
               <select id="service" name="service" required>
-                <option value="" selected disabled>Select one</option>
-                <option>Interior Painting</option>
-                <option>Exterior Painting</option>
-                <option>Interior + Exterior</option>
-                <option>Trim / Doors</option>
-                <option>Other</option>
+                <option value="" selected disabled data-i18n="service_placeholder">Select one</option>
+                <option data-i18n="service_opt_1">Interior Painting</option>
+                <option data-i18n="service_opt_2">Exterior Painting</option>
+                <option data-i18n="service_opt_3">Interior + Exterior</option>
+                <option data-i18n="service_opt_4">Trim / Doors</option>
+                <option data-i18n="service_opt_5">Other</option>
               </select>
             </div>
 
             <div class="field full">
-              <label for="address">Project Address (City/Area is fine)</label>
+              <label for="address" data-i18n="address_label">Project Address (City/Area is fine)</label>
               <input id="address" name="address" type="text" autocomplete="street-address" />
             </div>
 
             <div class="field full">
-              <label for="message">Project Details</label>
-              <textarea id="message" name="message" placeholder="Example: 3 bedrooms + hallway, ceilings included, preferred color, timeline, any special notes..." required></textarea>
+              <label for="message" data-i18n="details_label">Project Details</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                data-i18n-placeholder="details_placeholder"
+                placeholder="Example: 3 bedrooms + hallway, ceilings included, preferred color, timeline, any special notes..."></textarea>
             </div>
-
-            <!-- Optional: allow file upload if you use Formspree paid features or another provider.
-                 For simple Formspree setups, remove file input if it causes issues. -->
-            <!--
-            <div class="field full">
-              <label for="photos">Photos (optional)</label>
-              <input id="photos" name="photos" type="file" multiple />
-            </div>
-            -->
 
             <div class="field full" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-              <button class="btn primary" type="submit">Send Request</button>
-              <a class="btn" href="index.html">Back to Home</a>
+              <button class="btn primary" type="submit" data-i18n="btn_send_request">Send Request</button>
+              <a class="btn" href="index.html" data-i18n="btn_back_home">Back to Home</a>
             </div>
 
-            <p style="margin:10px 0 0; color: var(--muted); font-size: 0.92rem;">
+            <p style="margin:10px 0 0; color: var(--muted); font-size: 0.92rem;" data-i18n="consent">
               By submitting, you agree we may contact you about your project and scheduling an on-site estimate if needed.
             </p>
           </form>
@@ -126,7 +121,7 @@
 
   <footer>
     <div class="container">
-      <span>© <span id="year"></span> Flores Painting. All rights reserved.</span>
+      <span>© <span id="year"></span> Flores Painting. <span data-i18n="footer_rights">All rights reserved.</span></span>
     </div>
   </footer>
 
