@@ -1,12 +1,19 @@
 :root{
-  --bg: #0f172a;          /* slate-900 */
-  --panel: #111c36;       /* deep navy */
-  --text: #e5e7eb;        /* gray-200 */
-  --muted: #b6c2d1;       /* muted */
-  --brand: #38bdf8;       /* sky-400 */
-  --brand2: #22c55e;      /* green-500 */
-  --line: rgba(229,231,235,0.12);
-  --shadow: 0 12px 30px rgba(0,0,0,0.35);
+  /* Millennial grey base */
+  --bg: #f3f4f6;            /* light grey background */
+  --panel: #ffffff;         /* white cards/panels */
+  --text: #111827;          /* near-black text */
+  --muted: #6b7280;         /* grey text */
+
+  /* Accents */
+  --brand: #2563eb;         /* blue accent */
+  --brand2: #111827;        /* black accent */
+
+  /* Borders & shadows */
+  --line: rgba(17,24,39,0.10);
+  --shadow: 0 12px 28px rgba(17,24,39,0.12);
+  --shadow-soft: 0 6px 18px rgba(17,24,39,0.10);
+
   --radius: 18px;
   --max: 1120px;
 }
