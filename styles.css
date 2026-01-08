@@ -301,3 +301,14 @@ footer{
 @media (max-width: 520px){
   .gallery-grid{ grid-template-columns: 1fr; }
 }
+
+/* Fix select dropdown option text color */
+select {
+  color: #000;              /* selected value text */
+  background-color: #fff;   /* select box background */
+}
+
+select option {
+  color: #000;              /* dropdown options text */
+  background-color: #fff;   /* dropdown background */
+}
