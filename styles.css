@@ -1,20 +1,23 @@
 :root{
-  /* Millennial grey base */
-  --bg: #f3f4f6;            /* light grey background */
-  --panel: #ffffff;         /* white cards/panels */
-  --text: #111827;          /* near-black text */
-  --muted: #6b7280;         /* grey text */
+  /* Backgrounds */
+  --bg: #e9eff6;            /* soft blue-gray */
+  --panel: #ffffff;         /* card background */
+
+  /* Text */
+  --text: #0f172a;          /* near-black */
+  --muted: #475569;         /* slate gray */
 
   /* Accents */
-  --brand: #2563eb;         /* blue accent */
-  --brand2: #111827;        /* black accent */
+  --brand: #2563eb;         /* calm blue */
+  --brand-soft: #93c5fd;    /* light blue accent */
+  --black: #020617;
 
-  /* Borders & shadows */
-  --line: rgba(17,24,39,0.10);
-  --shadow: 0 12px 28px rgba(17,24,39,0.12);
-  --shadow-soft: 0 6px 18px rgba(17,24,39,0.10);
+  /* Lines & shadows */
+  --line: rgba(2,6,23,0.08);
+  --shadow: 0 10px 30px rgba(2,6,23,0.12);
+  --shadow-strong: 0 18px 45px rgba(2,6,23,0.18);
 
-  --radius: 18px;
+  --radius: 16px;
   --max: 1120px;
 }
 
@@ -320,142 +323,134 @@ select option {
   background-color: #fff;   /* dropdown background */
 }
 
-/* ---------- Page background / global text ---------- */
+/* ---------- Page background ---------- */
 body{
-  background: radial-gradient(900px 600px at 10% 0%, rgba(37,99,235,0.10), transparent 55%),
-              radial-gradient(900px 600px at 95% 10%, rgba(17,24,39,0.08), transparent 55%),
-              var(--bg);
+  background:
+    radial-gradient(1000px 600px at 15% -10%, rgba(147,197,253,0.35), transparent 55%),
+    radial-gradient(900px 600px at 90% 10%, rgba(37,99,235,0.15), transparent 55%),
+    var(--bg);
   color: var(--text);
 }
 
 /* ---------- Header ---------- */
 header{
-  background: rgba(243,244,246,0.85);
+  background: rgba(233,239,246,0.85);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(10px);
 }
 
-/* Brand badge: clean blue/black */
+/* ---------- Brand ---------- */
 .brand-badge{
-  background: linear-gradient(135deg, rgba(37,99,235,0.95), rgba(17,24,39,0.95));
-  box-shadow: var(--shadow-soft);
+  background: linear-gradient(135deg, #2563eb, #1e293b);
+  box-shadow: var(--shadow);
 }
 
-/* Dropdown menu: white panel, black text */
+/* ---------- Navigation menu ---------- */
 .menu{
-  background: rgba(255,255,255,0.98);
+  background: #ffffff;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
 }
 .menu a{
   color: var(--text);
-  border-bottom: 1px solid rgba(17,24,39,0.08);
 }
-.menu a:hover{ background: rgba(17,24,39,0.04); }
+.menu a:hover{
+  background: rgba(37,99,235,0.06);
+}
 .menu a.active{
-  background: rgba(37,99,235,0.10);
+  background: rgba(37,99,235,0.12);
   border-left: 3px solid var(--brand);
 }
 
 /* ---------- Buttons ---------- */
 .btn{
-  background: rgba(17,24,39,0.02);
+  background: #ffffff;
   border: 1px solid var(--line);
   color: var(--text);
 }
 .btn:hover{
-  background: rgba(17,24,39,0.05);
-  border-color: rgba(17,24,39,0.18);
+  background: rgba(37,99,235,0.06);
 }
 
 .btn.primary{
-  background: linear-gradient(135deg, rgba(37,99,235,0.95), rgba(59,130,246,0.95));
-  color: #fff;
-  border-color: transparent;
-  box-shadow: 0 10px 22px rgba(37,99,235,0.22);
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 10px 25px rgba(37,99,235,0.35);
 }
 .btn.primary:hover{
-  background: linear-gradient(135deg, rgba(37,99,235,1), rgba(59,130,246,1));
+  background: #1d4ed8;
 }
 
-/* Hamburger lines should be dark now */
-.hamburger-lines span{ background: var(--text); opacity: 0.9; }
-
-/* ---------- Cards / sections ---------- */
+/* ---------- Cards ---------- */
 .hero-card,
 .card,
-.gallery-item,
-.notice{
+.gallery-item{
   background: var(--panel);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
 }
 
-/* Slightly softer “lift” on hover for cards */
+.hero-card{
+  box-shadow: var(--shadow-strong);
+}
+
+/* ---------- Lift effect ---------- */
 .card:hover,
-.gallery-item:hover,
-.hero-card:hover{
-  transform: translateY(-2px);
-  transition: transform 140ms ease, box-shadow 140ms ease;
-  box-shadow: 0 16px 34px rgba(17,24,39,0.14);
+.gallery-item:hover{
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-strong);
+  transition: transform 150ms ease, box-shadow 150ms ease;
 }
 
-/* Section title text tones */
-.section-title p,
-.brand-text span,
-.card p,
-.notice{
-  color: var(--muted);
-}
-
-/* ---------- Hero image caption: modern light panel ---------- */
+/* ---------- Hero image caption ---------- */
 .hero-media{
+  box-shadow: var(--shadow-strong);
   border: 1px solid var(--line);
-  box-shadow: var(--shadow);
 }
 .hero-media .overlay{
-  background: linear-gradient(180deg, rgba(255,255,255,0.00), rgba(17,24,39,0.35));
+  background: linear-gradient(180deg, rgba(2,6,23,0.05), rgba(2,6,23,0.55));
 }
 .hero-media .caption{
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.95);
   border: 1px solid var(--line);
 }
 .caption strong{ color: var(--text); }
 .caption span{ color: var(--muted); }
 
-/* ---------- Form inputs (millennial grey, readable) ---------- */
+/* ---------- Section text ---------- */
+.section-title p,
+.card p,
+.brand-text span{
+  color: var(--muted);
+}
+
+/* ---------- Pills ---------- */
+.pill{
+  background: rgba(37,99,235,0.08);
+  border: 1px solid rgba(37,99,235,0.25);
+  color: var(--text);
+}
+
+/* ---------- Forms ---------- */
 input, textarea, select{
-  background: rgba(17,24,39,0.03);
-  border: 1px solid rgba(17,24,39,0.14);
+  background: #ffffff;
+  border: 1px solid rgba(2,6,23,0.15);
   color: var(--text);
 }
 input:focus, textarea:focus, select:focus{
-  border-color: rgba(37,99,235,0.55);
-  box-shadow: 0 0 0 4px rgba(37,99,235,0.15);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.25);
 }
 
-/* Your dropdown options readability fix (keep!) */
+/* Dropdown options readable */
 select option{
+  background: #ffffff;
   color: #000;
-  background-color: #fff;
-}
-
-/* ---------- Pills: light, clean, with blue hint ---------- */
-.pill{
-  background: rgba(37,99,235,0.06);
-  border: 1px solid rgba(37,99,235,0.18);
-  color: rgba(17,24,39,0.78);
 }
 
 /* ---------- Footer ---------- */
 footer{
   border-top: 1px solid var(--line);
   color: var(--muted);
-}
-
-/* Skip link styling to match */
-.skip-link:focus{
-  background: #ffffff;
-  border: 1px solid var(--line);
-  color: var(--text);
 }
